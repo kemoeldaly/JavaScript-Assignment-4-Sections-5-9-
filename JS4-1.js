@@ -1,3 +1,4 @@
+// UPDATED QUESTIONS 1 & 4
 //! Content: Functional programming and higher order
 // TODO: Note to students - these questions are experimental & may not all be
 // TODO: possible presently - do to best of ability using tools from lectures
@@ -8,13 +9,24 @@
 //* 1.  Filter out all of the empty strings from the list below
 // Input: let places = [" ","Argentina", " ", "San Diego","","  ","","Boston","New York"]
 // Output: ['Argentina', 'San Diego', 'Boston', 'New York']
-// let place = [" ","Argentina", " ", "San Diego","","  ","","Boston","New York"];
 
-let filteredPlaces = place.filter(function (place) {
-  return place.trim() !== "";
+let cities = [
+  " ",
+  "Argentina",
+  " ",
+  "San Diego",
+  "",
+  "  ",
+  "",
+  "Boston",
+  "New York",
+];
+
+let filteredCities = cities.filter(function (city) {
+  return city.trim() !== "";
 });
 
-console.log(filteredPlaces);
+console.log(filteredCities);
 
 //* 2. Write an anonymous function that sorts this list by the last name
 // Input: let author = ["Joel Carter", "Victor aNisimov", "Andrew P. Garfield","David hassELHOFF","Gary A.J. Bernstein"]
@@ -77,7 +89,7 @@ console.log(converted);
 
 function fibonacci(n) {
   if (n <= 0) {
-    return 0;
+    return 1;
   } else if (n === 1) {
     return 1;
   } else {
@@ -86,5 +98,6 @@ function fibonacci(n) {
 }
 
 for (let i = 0; i <= 5; i++) {
-  console.log(`Iteration ${i}: ${fibonacci(i)}`);
+  console.log(`${i}: ${fibonacci(i)}`);
 }
+
